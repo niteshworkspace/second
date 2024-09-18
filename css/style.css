@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+*,::before,::after{ margin: 0; box-sizing: border-box;}
+a{text-decoration: none;}
+button{ padding: 0; cursor: pointer;}
+:disabled{ cursor: not-allowed;}
+img{ vertical-align: bottom;}
+iframe{ border: none;}
+ul{ list-style: none; padding: 0;}
+label{ display: inline-block;}
+
+html{
+    font-size:15px;
+    --ff: "Montserrat", sans-serif;
+    --kus:"Kaushan Script", cursive;
+    --rob: roboto, sans-serif;
+    --yel:#fce38a;
+    --red:#f38181;
+    --green:#95e1d3;
+    --grad: linear-gradient(#f38181e6,#fce38ae6);
+}
+
+
+body{
+    font: 16px/1.3 var(--ff);
+}
+
+.container{
+    max-width: 1230px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.row{ display: flex; flex-flow: row wrap; margin: 0 -1rem; }
+[class^="col-"]{ padding: 0 1rem; flex: 1 0 auto; }
+
+.col-1{ flex-basis: 8.33%; max-width: 8.33%; }
+.col-2{ flex-basis: 16.66%; max-width: 16.66%; }
+.col-3{ flex-basis: 25%; max-width: 25%; }
+.col-4{ flex-basis: 33.33; max-width: 33.33%; }
+.col-5{ flex-basis: 41.66; max-width: 41.66%; }
+.col-6{ flex-basis: 50%; max-width: 50%; }
+.col-7{ flex-basis: 58.33%; max-width: 58.33%; }
+.col-8{ flex-basis: 66.66%; max-width: 66.66%; }
+.col-9{ flex-basis: 75%; max-width: 75%; }
+.col-10{ flex-basis: 83.33%; max-width: 83.33%; }
+.col-11{ flex-basis: 91.66%; max-width: 91.66%; }
+.col-12{ flex-basis: 100%; max-width: 100%; }
+.col-auto{ flex-basis: 20%; max-width: 20%;}
+.flex{ display: flex;}
+.justify-center{ justify-content: center;}
+.justify-right{ justify-content: right;}
+.justify-space-bet{ justify-content: space-between;}
+.align-center{ align-items: center;}
+.kus{ font-family: var(--kus);}
+.img-resp{ max-width: 100%; height: auto;}
+
+
+/* custom */
+.wrap-1{ background: url(../img/bg-1.webp) no-repeat center top/cover; color: #fff; padding-bottom: 28px; }
+header{ padding: 20px 0;}
+h1{ font-size: 30px; }
+h1 a{ display: inline-block; color: inherit;}
+nav li{ margin: 0 28px;}
+nav a{ display: block; font-size: 14px; color: inherit; border-bottom: 3px solid transparent; padding: 8px 0;}
+nav a:hover{ color: var(--yel); border-block-color: var(--yel);}
+.icon{ font-size: 14px; color: inherit; background: none; border: none; margin: 0 0 0 40px; }
+
+
+.slider{ text-align: center;}
+.slide{ display: none; padding: 10rem 0;}
+.slide.active{ display: block}
+.slide .kus{ font-size: 72px; margin-bottom: 40px; }
+.slide .banner-text{ font-weight: bold; font-size: 150px; line-height: 0.93;}
+.sep{ height: 3px; width: 60px; margin: 40px auto; background: var(--red); }
+.banner .sep{ background: #fff;}
+.banner .link{ display: inline-block; width: 160px; line-height: 34px; border: 3px solid; color: #fff; font-weight: bold; font-size: 14px;}
+.pager b{ font-size: 24px;}
+.pager small{ font-size: 18px;}
+.bar{ height: 3px; background: #fff; margin-bottom: 25px; position: relative;}
+.bar.active::before{ content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 0; background: var(--red); animation: changebar 4s linear 1;}
+@keyframes changebar{
+    0%{ width: 0;}
+    100%{ width: 100%;}
+}
+
+
+
+.wrap-2{ background: #fff; padding: 90px 0 110px; text-align: center; color: #333;}
+section .kus{ font-size: 24px;}
+section h2{ font-size: 30px; margin-top: 13px;}
+section .para{ font: 15px/24px var(--rob); color: #999;}
+.about{ margin-top: 100px; position: relative;}
+.about .caption{ position: absolute; inset: 0; background: var(--grad); color: #fff; opacity: 0; visibility: hidden; transition: .5s; }
+.caption p{ color: #fff;}
+.grid{ display: grid; height: 100%; place-items: center;}
+.about img{ transition: .5s;}
+.about:hover .caption{ opacity: 1; visibility: visible; transform: translate(-10px, -10px); box-shadow: 10px 10px var(--green); }
+.about:hover img{ transform: translate(-10px,-10px);}
+
+
+
+.wrap-3{ background: var(--green); padding: 4rem 0 6rem 0; text-align: center; color: #fff;}
+.wrap-3 b{ display: block; font-size: 72px; margin-top: 2rem;}
+.wrap-3 small{ font-size: 14px;}
+
+
+.wrap-4{ background: #fff; padding: 90px 0 110px; text-align: center; color: #333;}
+.gray{ background: #e5e5e5;}
+.services{ text-align: left; padding: 50px 0;}
+.gray .col-4{ background: #fff;}
+.hanging-icon{ width: 73px;}
+.services h3{ font-size: 14px; margin-bottom: 20px;}
+.gap-y-1{ row-gap: 1px;}
+
+
+
+.wrap-5{ background: url(../img/bg-2.webp) no-repeat center top/cover; padding: 90px 0 0 0; text-align: center; color: #333; position: relative;}
+.iphone{ position: absolute; bottom: 0; transform: translate(-82px,52px);}
+
+
+
+.wrap-6{ background: #fff; padding: 100px 0 120px; text-align: center; color: #333; }
+.services{ margin-top: 80px;}
+.accordion li{ margin-bottom: 10px; border: 1px solid #e5e5e5; }
+.accordion a{ display: block; padding: 14px; font-size: 14px; color: #333; border-bottom: 1px solid #e5e5e5 ; }
+.accordion a img{ vertical-align: middle; margin-right: 15px; }
+.accordion a span.fa{ float: right;}
+.accordion p{ font: 300 italic 15px/24px var(--rob); padding: 20px; display: none; }
+.accordion li.active p{ display: block; }
+.object{ height: 100%; background: aqua; }
+.object img{ height: 100%; width: 100%; object-fit: cover; object-position: center center; }
+
+
+
+/* responsive */
+@media screen and (max-width:1250px){
+    html{ font-size: 13px;}
+}
+@media screen and (max-width:980px){
+    .col-t-3{ flex-basis: 25%; max-width: 25%;}
+    .col-t-4{ flex-basis: 33.33%; max-width: 33.33%;}
+    .col-t-6{ flex-basis: 50%; max-width: 50%;}
+    .col-t-12{ flex-basis: 100%; max-width: 100%;}
+    nav li{ margin: 0 15px;}
+    .slide .banner-text{ font-size: 100px;}
+    .wrap-3 b{ font-size: 40px;}
+}
+
+
+@media screen and (max-width:767px){
+    html{ font-size: 12px; }
+    .col-m-12{ flex-basis: 100%; max-width: 100%; }
+    nav{ display: none;}
+    .iphone{ right: 1rem; transform: translate(0,52px); }
+}
+
+@media screen and (max-width:460px){
+    .col-p-4{ flex-basis: 33.33%; max-width: 33.33%; }
+    .col-p-6{ flex-basis: 50%; max-width: 50%; }
+    .col-p-12{ flex-basis: 100%; max-width: 100%; }
+    .slide .banner-text{ font-size: 50px;}
+    .slide .kus{ font-size: 35px;}
+    .pager b{ font-size: 16px;}
+    .pager small{ font-size: 12px; }
+    .slide{ padding: 5rem 0;}
+    .col-auto{ flex-basis: 33.3%; max-width: 50%;}
+    .iphone{ width: 50%; }
+}
